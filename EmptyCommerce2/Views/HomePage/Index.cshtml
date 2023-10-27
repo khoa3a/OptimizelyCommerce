@@ -1,10 +1,28 @@
 ﻿@model HomePage
 
-<div class="container">
-    <div class="row">
-        <div class="col-lg-8 col-md-10 mx-auto">
-            @Model.Products.FirstOrDefault()?.GetType()
+<section class="wrap page-link">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-xl-1">
+            </div>
+            <div class="col-sm-12 col-xl-10">
+                <div class="row">
+                    @foreach (var product in Model.Products)
+                    {
+                        <div class="col-sm-6 col-lg-4">
+                            <div class="nav-link">
+                                <div class="list-group-item-success">
+                                    <h3>@product.ProviderName</h3>
+                                    <p>2222</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-sm-12 col-xl-1">
+            </div>
         </div>
     </div>
-</div>
+</section>
 

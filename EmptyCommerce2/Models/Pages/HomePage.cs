@@ -1,4 +1,5 @@
-﻿using EPiServer.Commerce.Catalog.ContentTypes;
+﻿using EmptyCommerce2.Features.CatalogContent.Product;
+using EPiServer.Commerce.Catalog.ContentTypes;
 using System.ComponentModel.DataAnnotations;
 
 namespace EmptyCommerce2.Models.Pages
@@ -14,7 +15,7 @@ namespace EmptyCommerce2.Models.Pages
             Description = "Products associated with this content.",
             GroupName = SystemTabNames.Content,
             Order = 10)]
-        [AllowedTypes(AllowedTypes = new[] { typeof(ProductContent) })]
+        [AllowedTypes(AllowedTypes = new[] { typeof(GenericProduct) })]
         public virtual IList<ContentReference> Products { get; set; }
 
         //[Display(
