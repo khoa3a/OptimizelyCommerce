@@ -16,5 +16,8 @@ namespace EmptyCommerce2.Features.CatalogContent.Product
     {
         [Display(Name = "This is product name", GroupName = SystemTabNames.Content, Order = 10)]
         public virtual string ProductName { get; set; }
+
+        [Display(Name = "This is product price", GroupName = SystemTabNames.Content, Order = 20)]
+        public virtual decimal ProductPrice { get; set; }
     }
 }

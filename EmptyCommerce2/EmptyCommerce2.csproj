@@ -23,7 +23,6 @@
 
   <ItemGroup>
     <Folder Include="App_Data\Catalog\" />
-    <Folder Include="Models\ViewModels\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 </Project>
