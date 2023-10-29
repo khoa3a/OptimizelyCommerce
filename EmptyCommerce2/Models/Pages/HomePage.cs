@@ -15,14 +15,7 @@ namespace EmptyCommerce2.Models.Pages
             Description = "Products associated with this content.",
             GroupName = SystemTabNames.Content,
             Order = 10)]
-        [AllowedTypes(AllowedTypes = new[] { typeof(GenericProduct) })]
+        [AllowedTypes(AllowedTypes = new[] { typeof(LaptopProduct) })]
         public virtual IList<ContentReference> Products { get; set; }
-
-        //[Display(
-        //    Name = "Product Area",
-        //    GroupName = SystemTabNames.Content,
-        //    Order = 20)]
-        //[AllowedTypes(AllowedTypes = new[] { typeof(ProductContent) })]
-        //public virtual ContentArea? ProductArea { get; set; }
     }
 }

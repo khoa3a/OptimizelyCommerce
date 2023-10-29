@@ -4,6 +4,7 @@ using Mediachase.Commerce.Orders;
 using Mediachase.Search;
 using System.ComponentModel.DataAnnotations;
 using System;
+using EPiServer.Web;
 
 namespace EmptyCommerce2.Features.CatalogContent.Product
 {
@@ -15,9 +16,13 @@ namespace EmptyCommerce2.Features.CatalogContent.Product
     public class GenericProduct : ProductContent
     {
         [Display(Name = "This is product name", GroupName = SystemTabNames.Content, Order = 10)]
-        public virtual string ProductName { get; set; }
+        public virtual string? Name { get; set; }
 
         [Display(Name = "This is product price", GroupName = SystemTabNames.Content, Order = 20)]
-        public virtual decimal ProductPrice { get; set; }
+        public virtual decimal Price { get; set; }
+
+        [Display(Name = "This is product image", GroupName = SystemTabNames.Content, Order = 30)]
+        [UIHint(UIHint.Image)]
+        public virtual ContentReference? ImageFile { get; set; }
     }
 }

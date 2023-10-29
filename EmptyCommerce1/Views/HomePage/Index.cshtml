@@ -1,0 +1,15 @@
+﻿@model HomePageViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <h2>@Model.Page.Name</h2>
+        </div>
+    </div>
+</div>
+
+<button type="button"
+        value="@string.Format("{0};{1}", Model.Page.Name, Url.Action("Test", "HomePage"))"
+        onclick="javascript:testClick(this.value)">
+    <span>Test</span>
+</button>

@@ -11,10 +11,25 @@
                     {
                         <div class="col-sm-6 col-lg-4">
                             <div class="nav-link">
-                                <div class="list-group-item-success">
-                                    <h3>@product.ProductName</h3>
-                                    <p>@product.ProductPrice</p>
+                                <div>
+                                    <p>@product.Name</p>
+                                    <p><img src="@Url.ContentUrl(product.Image)" /></p>
+                                    <p>@product.Price</p>
                                 </div>
+                            </div>
+                            <div>
+                                
+
+                                @*<input type="button"
+                                       value="Buy Now"
+                                *@       onclick="location.href='@Url.Action("BuyNow", "HomePage")'" />
+
+                                @using (Html.BeginForm("BuyNow", "HomePage", FormMethod.Post))
+                                {
+                                    <!-- form goes here -->
+
+                                    <input type="submit" value="Buy Now" />
+                                }
                             </div>
                         </div>
                     }
